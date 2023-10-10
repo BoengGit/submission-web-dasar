@@ -1,0 +1,554 @@
+@import url('https://fonts.googleapis.com/css2?family=Oxanium:wght@700&family=Raleway:wght@400;600;700;800;900&display=swap');
+
+
+:root {
+    --background: #FFF7e7;
+    --white: #FFFFFF;
+    --danger: #F95C19;
+    --danger-soft: #FFE4D9;
+    --warning-soft: #FFEDC9;
+    --warning: #FFAF0F;
+    --dark-text: #817382;
+    --gray-100: #EBEBF5;
+    --gray-200: #DBDBE9;
+    --gray-300: #C5C5D2;
+    --gray-500: #9291A1;
+    --gray-600: #7B7A8B;
+    --gray-700: #5C5B6C;
+    --gray-800: #464558;
+    --gray-900: #2F2E41;
+    --gray-1000: #222132;
+    --gray-1100: #11111D;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    /* border: 1px solid salmon; */
+    margin: 0;
+}
+
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: var(--background);
+}
+
+/* Global Style */
+main .title {
+    text-align: center;
+    margin-block-end: 5rem;
+}
+
+main .title h2 {
+    color: var(--danger);
+    text-transform: uppercase;
+    font-family: 'Oxanium', sans-serif;
+    font-weight: 700;
+    font-size: 2rem;
+}
+
+main .title h1 {
+    color: var(--gray-1100);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-block-start: 1rem;
+}
+
+/* End Global Style */
+
+/* Header Style */
+header.navbar-container {
+    background-image: radial-gradient(9917.17% 140.83% at 0.83% 0%, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 0.01%, rgba(255, 255, 255, 0.15) 100%);
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.05);
+    padding: 1.6rem 1rem;
+    position: sticky;
+    top: 0;
+}
+
+header.navbar-container.scrolled {
+    background-color: var(--white);
+}
+
+header.navbar-container .navbar {
+    display: flex;
+    max-width: 1350px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    margin-inline: auto;
+    z-index: 1;
+}
+
+header.navbar-container .navbar .logo img {
+    width: 145px;
+}
+
+header.navbar-container .navbar .nav-list {
+    display: flex;
+}
+
+header.navbar-container .navbar .nav-list ul {
+    display: flex;
+    padding: 0;
+    gap: 2rem 3.5rem;
+}
+
+header.navbar-container .navbar .nav-list li {
+    list-style-type: none;
+}
+
+header.navbar-container .navbar .nav-list li a {
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 700;
+    color: var(--dark-text);
+}
+
+header.navbar-container .navbar .nav-list li a:hover {
+    color: var(--danger);
+    font-weight: 800;
+}
+
+header.navbar-container .navbar .nav-list .hamburger{
+    display: none;
+    font-size: 1.5rem;
+    align-items: center;
+}
+/* End Header Style */
+
+/* Hero  Secction Style */
+main .hero {
+    background-image: url("../resources/backgorund-hero.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+main .hero .hero-section {
+    max-width: 1350px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 8rem;
+    padding-inline: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+main .hero .hero-description .hero-title {
+    font-size: 3rem;
+    font-weight: 400;
+    color: #261134;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+main .hero .hero-description .hero-title span {
+    font-weight: 800;
+}
+
+main .hero .hero-description p {
+    color: #4D4D4D;
+    font-size: 1.2rem;
+    font-weight: 400;
+    width: 20rem;
+    margin-top: 1rem;
+}
+
+.button {
+    padding: .8rem 1.5rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: var(--white);
+    border-radius: 5px;
+    border: 3px solid var(--danger);
+    background-color: var(--danger);
+    cursor: pointer;
+    transition: all .15s ease-in;
+}
+
+.button:hover {
+    border: 3px solid var(--danger);
+    color: #4D4D4D;
+    background-color: transparent;
+}
+
+main .hero .hero-section .button i {
+    margin-inline-start: .2rem;
+}
+
+
+main .hero .hero-section img {
+    width: 850px;
+}
+/* End Hero Section Card */
+
+/* Services Card */
+main .services {
+    max-width: 1350px;
+    width: 100%;
+    margin-inline: auto;
+    padding-block: 7rem;
+    padding-inline: 1.2rem;
+}
+
+main .services .services-card {
+    display: flex;
+    gap: 2rem;
+    flex: 1;
+}
+
+main .services .services-card .card {
+    background-color: var(--white);
+    padding: 3rem 3rem;
+    border-radius: 16px;
+    border: 1px solid var(--white);
+    box-shadow: 0px 0px 20px 5px rgba(63, 61, 86, 0.05);
+
+    &:hover {
+        border: 1px solid var(--danger);
+        box-shadow: 0px 0px 999px 999px rgba(255, 255, 255, 0.5);
+        z-index: 500;
+    }
+}
+
+main .services .services-card .card:hover {
+    .card-description {
+        color: var(--danger);
+    }
+}
+
+main .services .services-card .card .title-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .services .services-card .card .title-card .container-icon {
+    background-color: var(--warning);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 99px;
+    text-align: center;
+}
+
+main .services .services-card .card .title-card .container-icon i {
+    padding-top: 40px;
+    font-size: 2.5rem;
+    color: var(--danger);
+}
+
+main .services .services-card .card .title-card h1 {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--gray-800);
+    margin-top: 2.8rem;
+}
+
+main .services .services-card .card .card-description {
+    display: flex;
+    flex-direction: column;
+    margin-top: 1.6rem;
+    gap: 1rem;
+    font-size: 1rem;
+    color: var(--gray-600);
+    font-weight: 400;
+}
+
+main .services .services-card .card .card-description p {
+    line-height: 1.8rem;
+}
+
+main .services .services-card .card .card-description ul {
+    list-style: none;
+    padding: 0;
+}
+
+main .services .services-card .card .card-description ul li {
+    line-height: 1.8rem;
+}
+
+main .services .services-card .card .card-description ul li::before {
+    content: "\2022";
+    color: var(--danger);
+    font-weight: bold;
+    display: inline-block;
+    width: 1.2em;
+}
+
+main .services .services-card .card .button-card {
+    padding: .8rem 1.5rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #4D4D4D;
+    border-radius: 5px;
+    border: 3px solid var(--danger);
+    background-color: transparent;
+    cursor: pointer;
+    transition: all .15s ease-in;
+    width: 100%;
+}
+
+main .services .services-card .card .button-card:hover {
+    border: 3px solid var(--danger);
+    color: var(--white);
+    background-color: var(--danger);
+}
+
+/* End Services Card */
+
+
+/* Fact Counters */
+
+main .fact-counters {
+    display: flex;
+    max-width: 1350px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+main .fact-counters .fact {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+main .fact-counters .fact i {
+    font-size: 3.1rem;
+}
+
+main .fact-counters .fact h2 {
+    font-size: 2.4rem;
+    color: var(--danger);
+    font-weight: 800;   
+}
+
+main .fact-counters .fact p {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--gray-800);
+}
+
+/* End Fact Counters */
+
+/* About Us */
+
+main .about-us {
+    max-width: 1350px;
+    width: 100%;
+    margin-inline: auto;
+    padding-inline: 1rem;
+    margin-block-end: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main .about-us .title {
+    margin-block-end: 2rem;
+}
+
+main .about-us .card {
+    background-color: var(--danger);
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-inline: 3rem;
+    padding-block: 2rem;
+}
+
+main .about-us .card .image {
+    margin-block-start: 1.5rem;
+}
+
+main .about-us .card img {
+    width: 200px;
+    border-radius: 50%;
+}
+
+main .about-us .card .detail {
+    font-size: 1.2rem;
+    color: var(--white);
+    margin-block: 2rem;
+    line-height: 1.8rem;
+}
+
+/* End About Us */
+
+/* footer */
+
+footer {
+    background-color: var(--white);
+    padding: 2.4rem;
+    text-align: center;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+
+/* footer */
+
+
+/* Responseive Style */
+@media screen and (max-width: 768px) {
+
+    header.navbar-container {
+        box-shadow: none;
+        z-index: 999;
+    }
+
+    header.navbar-container .navbar .nav-list ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        margin-top: 3rem;
+        padding: 1rem 0rem 1rem 0rem;
+        text-align: center;
+        gap: 1.3rem;
+        background-image: radial-gradient(9917.17% 140.83% at 0.83% 0%, rgba(255, 255, 255, 0.70) 0%, rgba(255, 255, 255, 0.70) 0.01%, rgba(255, 255, 255, 0.15) 100%);
+        box-shadow: 0px 4px 20px -6px rgba(0, 0, 0, 0.05);
+    }
+
+    header.navbar-container .navbar .nav-list ul.scrolled {
+        background-color: var(--white);
+    }
+
+    header.navbar-container .navbar .nav-list li {
+        padding: .3rem;
+    }
+
+    header.navbar-container .navbar .nav-list .hamburger {
+        display: flex;
+        cursor: pointer;
+    }
+
+    header.navbar-container .navbar .nav-list .hidden {
+        display: none;
+    }
+
+    .custom-main {
+        opacity: .5;
+    }
+
+    main .hero .hero-section{
+        flex-direction: column;
+        padding: 0;
+        padding-block: 4rem;
+        padding-inline: 1.2rem;
+    }
+
+    main .hero .hero-section .hero-description {
+        order: 2;
+        margin-top: 1rem;
+    }
+
+    main .hero .hero-description .hero-title {
+        font-size: 2rem;
+        font-weight: 400;
+        color: #261134;
+        text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+
+    main .hero .hero-section img {
+        margin-block: 1rem;
+        width: 350px;
+        order: 1;
+    }
+
+    .button {
+        padding: .6rem 1rem;
+        margin-top: 1.5rem;
+        font-size: 1rem;
+    }
+
+    main .title h2 {
+        font-size: 1.5rem;
+    }
+
+    main .title h1 {
+        font-size: 1.8rem;
+    }
+
+    main .hero .hero-section .button i {
+        margin-inline-start: .2rem;
+    }
+
+    main .services .services-card {
+        flex-wrap: wrap;
+    }
+
+    main .services .services-card .card .button-card {
+        padding: .6rem 1rem;
+        font-size: 1rem;
+    }
+
+    main .services .services-card .card .card-description {
+        font-size: 1rem;
+        color: var(--gray-600);
+        font-weight: 400;
+    }
+
+    main .fact-counters {
+        flex-wrap: wrap;
+        padding-inline: 2.3rem;
+        justify-content: center;
+        gap: 2rem 2rem;
+    }
+
+    main .fact-counters .fact {
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        gap: .3rem;
+    }
+
+    main .fact-counters .fact i {
+        font-size: 2.7rem;
+    }
+
+    main .fact-counters .fact h2 {
+        font-size: 1.9rem;
+    }
+
+    main .fact-counters .fact p {
+        font-size: 1.1rem;
+    }
+
+    main .about-us .card {
+        padding-inline: 3rem;
+        padding-block: 2rem;
+    }
+
+    main .about-us .card .image {
+        margin-block-start: 1.5rem;
+    }
+
+    main .about-us .card img {
+        width: 170px;
+        border-radius: 50%;
+    }
+
+    main .about-us .card .detail {
+        font-size: .9rem;
+        color: var(--white);
+        margin-block: 2rem;
+        line-height: 1.4;
+    }
+
+    footer {
+        background-color: var(--white);
+        padding: 1.2rem;
+        text-align: center;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+}
+/* End Responsive Style */
+
+
+
